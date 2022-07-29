@@ -19,5 +19,7 @@ Run npm install to install all needed development dependencies. Next, run the fo
 >npm run dbDev
 
 ---
+___**NOTE:**___
+This is an ongoing file due to ideals and experiments. Things are subject to change.
 
 Developer: Wanedev
