@@ -8,7 +8,7 @@ app.use(express.json())
 app.use(express.urlencoded({extended:false}));
 
 
-//Find all query
+//The R(Read) in C.R.U.D. Specifically find all lessons.  
 app.get("/", async (req, res) => {
   try {
     //Await a connection to mongodb atlas
