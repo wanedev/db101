@@ -6,8 +6,8 @@
   "scripts": {
     "start": "node app.js",
     "dev": "nodemon app.js",
-    "db":"node db.js",
-    "dbDev":"nodemon db.js"
+    "db": "node db.js",
+    "dbDev": "nodemon db.js"
   },
   "author": "wanedev",
   "license": "ISC",
