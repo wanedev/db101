@@ -19,6 +19,23 @@ Run npm install to install all needed development dependencies. Next, run the fo
 >npm run dbDev
 
 ---
+
+## ___END POINTS/___
+
+___Available endpoints.___
+
+---
+
+/database
+
+/database/subject
+
+/database/create
+
+/database/delete
+
+---
+
 ___**NOTE:**___
 This is an ongoing file due to ideals and experiments. Things are subject to change.
 
