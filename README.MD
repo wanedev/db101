@@ -66,5 +66,6 @@ ___Available endpoints.___
 ___**NOTE:**___
 This is an ongoing file due to ideals and experiments, things are subject to change. A brief outline on how to use the mongodb methods and queries. Most likely you wouldn't use the GET http verb with every mongodb method.  For example, when you insertOne( ) you commonly would use post in correlation with that particular http verb when it comes to form submissions or any other body request. Teaching and learning as I go. 
 
+---
 
 Developer: Wanedev
