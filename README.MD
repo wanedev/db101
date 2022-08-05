@@ -22,7 +22,13 @@ npm i express mongodb dotenv
 
 ```
 
-Run npm install to install all needed development dependencies. Next, run the following command below.
+
+If you have cloned this demo project, then run npm install,for the necessary development dependencies for this demo app. 
+> npm install
+
+---
+
+If you have not cloned this project only, npm install the three basic packages that we will need to allow for our server, database connection, and hiding our connection string.
 
 >npm run dbDev
 
