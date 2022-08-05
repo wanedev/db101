@@ -43,7 +43,7 @@ npm run dbDev
 
 or
 
-The following script below will run the db file without nodemon. This is our entry file for deploying or containerization.
+The following script below will run the db file without nodemon. This is our entry file. Normally we would use this file for deploying or containerization.
 ```
 npm run db
 ```
