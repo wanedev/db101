@@ -62,6 +62,8 @@ ___Available endpoints.___
 
 /database/create
 
+/database/find
+
 /database/delete
 
 ---

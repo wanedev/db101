@@ -50,6 +50,24 @@ app.get("/database/subject", async (req, res) => {
   }
 })
 
+/*The C(Create) in C.R.U.D. 
+db.collection.InsertOne()
+Insert a document into a collection.
+*/
+app.get("/database/create", async (req, res) => {
+  
+  const db = client.db('db101')
+  const dbLessons = await db.collection("lessons").insertOne({title:"Shape drawing",
+    subject:"Drawing",
+    process:"Drawing basic shapes.",
+    developer:"Lucas Deez"})
+
+//Add a conditional later
+    res.send('You have inserted the following:' + JSON.stringify(dbLessons) + 'Go to the endpoint /database to access the post body')
+  console.log('You have inserted the following:' + JSON.stringify(dbLessons.length))
+
+})
+
 //Finding document by ObjectId.
 //find({_id:ObjectId("62e9dd6492508eb3f2e82840")})
 //Use different id numbers to check your queries.
@@ -58,38 +76,20 @@ an update and delete action for that specific document. */
 app.get("/database/find", async (req, res) => {
   try {
     const db = client.db('db101')
-    const dbLessons = await db.collection("lessons").find({_id:ObjectId("62e9dd6492508eb3f2e82840")}).toArray()
+    const dbLessons = await db.collection("lessons").find({_id:ObjectId("62e5c5bd98e35a702fa185aa")}).toArray()
     console.log(JSON.stringify(dbLessons))
 
-    if (dbLessons.length) {
-      res.json("You have " + dbLessons.length + " document in your collections."+ JSON.stringify(dbLessons))
-      console.log("You have " + dbLessons.length + " document in your collections.")
-    } else {
-      res.json("You do not currently have any lessons in your  collection.")
-    }
+    if (dbLessons) {
+      res.json("Object id:"+ JSON.stringify(dbLessons))
+      console.log("Object id:"+ JSON.stringify(dbLessons))
+    } 
   } catch (err) {
     console.log(err)
-    res.json("Try again later.")
+    res.json("Try again later. Not sure where the error occurred.")
   }
 })
 
-/*The C(Create) in C.R.U.D. 
-db.collection.InsertOne()
-Insert a document into a collection.
-*/
-app.get("/database/create", async (req, res) => {
-  
-    const db = client.db('db101')
-    const dbLessons = await db.collection("lessons").insertOne({title:"Shape drawing",
-      subject:"Drawing",
-      process:"Drawing basic shapes.",
-      developer:"Lucas Deez"})
 
-  //Add a conditional later
-      res.send('You have inserted the following:' + JSON.stringify(dbLessons) + 'Go to the endpoint /database to access the post body')
-    console.log('You have inserted the following:' + JSON.stringify(dbLessons.length))
-
-})
 
 /*The D(Delete) in C.R.U.D. 
 db.collection.deleteOne()
