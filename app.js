@@ -1,4 +1,5 @@
 const express = require('express')
+const { ObjectId } = require('mongodb')
 const app = express()
 const client = require("./db.js")
 const db = client.db()
@@ -35,6 +36,29 @@ app.get("/database/subject", async (req, res) => {
   try {
     const db = client.db('db101')
     const dbLessons = await db.collection("lessons").find({subject: "database"}).toArray()
+    console.log(JSON.stringify(dbLessons))
+
+    if (dbLessons.length) {
+      res.json("You have " + dbLessons.length + " document in your collections."+ JSON.stringify(dbLessons))
+      console.log("You have " + dbLessons.length + " document in your collections.")
+    } else {
+      res.json("You do not currently have any lessons in your  collection.")
+    }
+  } catch (err) {
+    console.log(err)
+    res.json("Try again later.")
+  }
+})
+
+//Finding document by ObjectId.
+//find({_id:ObjectId("62e9dd6492508eb3f2e82840")})
+//Use different id numbers to check your queries.
+/*In this use case we are looking for one specific document by ObjectId. We can perform
+an update and delete action for that specific document. */
+app.get("/database/find", async (req, res) => {
+  try {
+    const db = client.db('db101')
+    const dbLessons = await db.collection("lessons").find({_id:ObjectId("62e9dd6492508eb3f2e82840")}).toArray()
     console.log(JSON.stringify(dbLessons))
 
     if (dbLessons.length) {
