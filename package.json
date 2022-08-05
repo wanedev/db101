@@ -1,7 +1,7 @@
 {
   "name": "db101",
   "version": "1.0.0",
-  "description": "Basic organized approach to setting up a database connection.",
+  "description": "Setting up a database connection and performing various queries and mongodb methods.",
   "main": "app.js",
   "scripts": {
     "start": "node app.js",

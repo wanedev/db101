@@ -22,15 +22,28 @@ npm i express mongodb dotenv
 
 ```
 
-
-If you have cloned this demo project, then run npm install,for the necessary development dependencies for this demo app. 
-> npm install
+If you have not cloned this project only, npm install the three basic packages that we will need to allow for our server, database connection, and hiding our connection string. 
 
 ---
 
-If you have not cloned this project only, npm install the three basic packages that we will need to allow for our server, database connection, and hiding our connection string.
+If you have cloned this demo project, then run npm install,for the necessary development dependencies for this demo app. 
+```
+npm install
+```
+---
 
+
+
+
+
+The following script below will run the db file with nodemon
 >npm run dbDev
+
+or
+
+The following script below will run the db file without nodemon
+>npm run db
+
 
 ---
 
