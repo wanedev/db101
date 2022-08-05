@@ -1,12 +1,20 @@
-# DATABASE CONNECTION (Mongodb)
+# DATABASE CONNECTION. (Mongodb)
 
 In this demonstration we will connect to the mongodb atlas cloud database. We are using the mongodb driver to communicate with atlas in order to query and perform various database methods. Their are other of ways to connect to mongodb, but I choose this specific configuration. The following configuration will establish a connection to our database first before our application loads. 
 
 ---
 
-## ___Instructions___
+## ___Instructions: Mongodb___
 
-- Sign up an create a mongodb atlas account if you haven't already. Make sure you have your connection string so you can store it inside your .env file.
+- Sign up to create a mongodb atlas account if you haven't already. 
+
+- Go to the mongodb documentation for basic instructions on how to use mongodb to get an overview of what is possible. 
+
+- Make sure you have your connection string so you can store it inside your .env file.
+
+---
+
+## ___Instructions: Project setup___
 
 Install the following npm packages
 ```
@@ -37,6 +45,7 @@ ___Available endpoints.___
 ---
 
 ___**NOTE:**___
-This is an ongoing file due to ideals and experiments. Things are subject to change.
+This is an ongoing file due to ideals and experiments, things are subject to change. A brief outline on how to use the mongodb methods and queries. Most likely you wouldn't use the GET http verb with every mongodb method.  For example, when you insertOne( ) you commonly would use post in correlation with that particular http verb when it comes to form submissions or any other body request. Teaching and learning as I go. 
+
 
 Developer: Wanedev
