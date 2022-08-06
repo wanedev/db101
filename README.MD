@@ -66,7 +66,7 @@ ___Available endpoints.___
 
 /database/updateid
 
-/database/delete
+/database/deleteid
 
 ---
 
