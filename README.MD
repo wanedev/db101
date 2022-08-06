@@ -62,7 +62,9 @@ ___Available endpoints.___
 
 /database/create
 
-/database/find
+/database/findid
+
+/database/updateid
 
 /database/delete
 
