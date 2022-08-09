@@ -109,7 +109,7 @@ app.get("/database/updateid", async (req, res) => {
 
 
 /*The D(Delete) in C.R.U.D. 
-db.collection.deleteOne()
+db.collection.deleteOne({_id:ObjectId("objectidrighthere")})
 Delete the previous insertOne document
 */
 
